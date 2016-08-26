@@ -1,10 +1,9 @@
-package eu.svez.template.websocket.endpoint
+package eu.svez.template.websocket
 
 import akka.actor.ActorSystem
 import akka.http.scaladsl.Http
 import akka.http.scaladsl.server.Directives._
 import akka.stream.ActorMaterializer
-import eu.svez.template.websocket.common.WebSocketPeer
 
 trait WebSocketServer extends App with WebSocketPeer with WebSocketEndpoint {
 

@@ -2,7 +2,7 @@ package eu.svez.template.websocket.examples
 
 import akka.http.scaladsl.model.ws.{Message, TextMessage}
 import akka.stream.scaladsl.{Sink, Source}
-import eu.svez.template.websocket.common.IndependentPeer
+import eu.svez.template.websocket.IndependentPeer
 import eu.svez.template.websocket.ops.{flow, sink}
 
 import scala.util.Random

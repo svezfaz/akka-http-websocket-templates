@@ -2,7 +2,7 @@ package eu.svez.template.websocket.examples
 
 import akka.http.scaladsl.model.ws.{Message, TextMessage}
 import akka.stream.scaladsl.Flow
-import eu.svez.template.websocket.common.WebSocketPeer
+import eu.svez.template.websocket.WebSocketPeer
 import eu.svez.template.websocket.ops._
 
 trait AckingPeer extends WebSocketPeer {

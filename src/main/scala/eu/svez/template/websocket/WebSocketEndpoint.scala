@@ -1,4 +1,4 @@
-package eu.svez.template.websocket.endpoint
+package eu.svez.template.websocket
 
 trait WebSocketEndpoint {
 
@@ -6,3 +6,5 @@ trait WebSocketEndpoint {
   val port: Int
 
 }
+
+

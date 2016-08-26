@@ -1,6 +1,6 @@
 package eu.svez.template.websocket
 
-import eu.svez.template.websocket.endpoint.{WebSocketClient, WebSocketEndpoint, WebSocketServer}
+import eu.svez.template.websocket.endpoint.WebSocketServer
 import eu.svez.template.websocket.examples.{ChatPeer, LoggingPeer, StockPriceProducerPeer}
 
 object ChatServer extends ChatPeer with WebSocketServer with LocalHostAndPort

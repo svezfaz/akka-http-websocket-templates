@@ -1,4 +1,4 @@
-package eu.svez.template.websocket.endpoint
+package eu.svez.template.websocket
 
 import akka.actor.ActorSystem
 import akka.http.scaladsl.Http
@@ -7,7 +7,6 @@ import akka.http.scaladsl.model.ws._
 import akka.stream.scaladsl.GraphDSL.Builder
 import akka.stream.scaladsl.{Flow, GraphDSL, RunnableGraph}
 import akka.stream.{ActorMaterializer, ClosedShape}
-import eu.svez.template.websocket.common.WebSocketPeer
 
 import scala.concurrent.Future
 
