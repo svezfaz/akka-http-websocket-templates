@@ -15,7 +15,9 @@ trait WebSocketPeer {
 }
 
 trait PushingPeer extends IndependentPeer {
-  override val messageSink: Sink[Message, _] = Sink.ignore
+  import ops._
+
+  override val messageSink: Sink[Message, _] = sink.ignoreMessages()
 }
 
 trait ListeningPeer extends IndependentPeer {
