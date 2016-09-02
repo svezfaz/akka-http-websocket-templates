@@ -35,7 +35,7 @@ object ops {
       .map(message => println(s"Received text message: [$message]"))
       .to(Sink.ignore)
 
-    def ignoreMessages(parallelism: Int = 4): Sink[Message, NotUsed] = Flow[Message]
+    def ignoreMessages(parallelism: Int = 4)(implicit mat: Materializer): Sink[Message, NotUsed] = Flow[Message]
       .mapAsync(parallelism) {
         case msg: BinaryMessage =>
           msg.dataStream.runWith(Sink.ignore)
