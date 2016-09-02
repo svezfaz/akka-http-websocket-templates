@@ -11,7 +11,6 @@ import scala.concurrent.duration._
 object ops {
 
   object flow {
-
     def messageToString(parallelism: Int = 4, streamedMessageTimeout: FiniteDuration = 5 seconds)
                        (implicit mat: Materializer, ac: ExecutionContext): Flow[Message, String, NotUsed] =
       Flow[Message].mapAsync(parallelism) {
@@ -29,11 +28,9 @@ object ops {
       }
 
     val stringToMessage: Flow[String, Message, NotUsed] = Flow[String].map(TextMessage.apply)
-
   }
 
   object sink {
-
     val log: Sink[String, NotUsed] = Flow[String]
       .map(message => println(s"Received text message: [$message]"))
       .to(Sink.ignore)
@@ -46,7 +43,6 @@ object ops {
           msg.textStream.runWith(Sink.ignore)
       }
       .to(Sink.ignore)
-
   }
 
 }
